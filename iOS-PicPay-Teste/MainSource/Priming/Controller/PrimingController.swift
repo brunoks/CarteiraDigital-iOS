@@ -53,32 +53,38 @@ class PrimingController: UIViewController {
     
     @objc
     fileprivate func fazerLoginGoogle() {
-        GIDSignIn.sharedInstance()?.signIn()
+        let alert = UIAlertController(title: "Já possui cadastro?", message: "Selecione sua chave privada ou crie uma nova. Lembre-se de guardar o arquivo gerado e anotar sua senha!", preferredStyle: .alert)
+        let action1 = UIAlertAction(title: "Cadastrar", style: .default) { [weak self] (_) in
+            Alert(self).showAlertWithTextField(with: "Digite uma senha pra salvar a chave privada") { (senha) in
+                self?.cadastrarCarteira(with: senha)
+            }
+        }
+        let action2 = UIAlertAction(title: "Sim", style: .default) { [weak self] (_) in
+            let _ = self?.abrirArquivoComChaveCriptografada()
+        }
+        alert.addAction(action1)
+        alert.addAction(action2)
+        self.present(alert, animated: true, completion: nil)
     }
     
     func salvarChaveCriptografada(text: String) {
-        let file = "uclCriptoCoinChave.txt"
-        
-        let filename = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent(file)
-        
-        do {
-            try text.write(to: filename, atomically: true, encoding: String.Encoding.utf8)
-            
-            let activityVC = UIActivityViewController(activityItems: [text], applicationActivities: nil)
-            activityVC.transitioningDelegate = self
-            self.present(activityVC, animated: true, completion: nil)
-        } catch {
+    
+        let activityVC = UIActivityViewController(activityItems: [text], applicationActivities: nil)
+        activityVC.transitioningDelegate = self
+        activityVC.completionWithItemsHandler = { [weak self] (_,completed,_,_) in
+            if completed {
+                self?.chamaTelaPagamento()
+            }
         }
+        self.present(activityVC, animated: true, completion: nil)
     }
     
-    func abrirArquivoComChaveCriptografada() -> String? {
+    func abrirArquivoComChaveCriptografada() {
         
         let importMenu = UIDocumentPickerViewController(documentTypes: ["public.text"], in: .import)
         importMenu.delegate = self
         importMenu.modalPresentationStyle = .formSheet
         self.present(importMenu, animated: true, completion: nil)
-        
-        return nil
     }
     
     @objc
@@ -98,23 +104,32 @@ class PrimingController: UIViewController {
         }
     }
     
-//    Alert(strong).normalAlert(with: "Cadastro realizado com sucesso") { [weak self] in
-//    self?.chamaTelaPagamento()
-//    }
+    func cadastroConcluido() {
+        Alert(self).normalAlert(with: "Cadastro realizado com sucesso") { [weak self] in
+            self?.chamaTelaPagamento()
+        }
+    }
+
     @objc fileprivate func chamaTelaPagamento() {
         let viewc = CarteiraViewController()
-        self.present(viewc, animated: true, completion: nil)
+        self.present(UINavigationController(rootViewController: viewc), animated: true, completion: nil)
     }
+    
+    func possuiCadastro() {
+        self.abrirArquivoComChaveCriptografada()
+    }
+    
+    func naoPossuiCadastro() {
+        Alert(self).showAlertWithTextField(with: "Digite uma senha pra salvar a chave privada") { [weak self] (senha) in
+            self?.cadastrarCarteira(with: senha)
+        }
+    }
+    
 }
 
 extension PrimingController: GIDSignInUIDelegate, DidSignInGmailUCL {
     func didSignIn(_ profile: GIDGoogleUser?) {
-        
         UserDefaults.standard.setValue(profile!.profile.imageURL(withDimension: 100)?.absoluteString, forKey: "profile_image")
-        
-        Alert(self).showAlertWithTextField(with: "Digite uma senha pra salvar a chave privada") { [weak self] (senha) in
-            self?.cadastrarCarteira(with: senha)
-        }
     }
 }
 
@@ -125,11 +140,36 @@ extension PrimingController: UIDocumentPickerDelegate, UINavigationControllerDel
         guard let myURL = urls.first else {
             return
         }
-        print("import result : \(myURL)")
+        let path = myURL.path
+        
+        do {
+            
+            let text = try String(contentsOfFile: path)
+            UserDefaults.standard.setValue(text, forKeyPath: WalletKeysUser.private_key)
+            
+            Alert(self).showAlertWithTextField(with: "Digite sua senha.") { [weak self] (senha) in
+                self?.gerarChavePublica(password: senha)
+            }
+        } catch {
+            Alert(self).normalAlert(with: "Erro ao selecionar arquivo. Tente novamente")
+        }
+    }
+    
+    func gerarChavePublica(password: String?) {
+        let api = CarteiraViewModel()
+        Alert(self).loading(title: "Carregando")
+        api.mudarChavePublica(password: password) { (alerta) in
+            Alert(self).dissmiss()
+            if let error = alerta {
+                Alert(self).normalAlert(with: error)
+            }
+            Alert(self).normalAlert(with: "Tudo pronto", and: "", handler: { [weak self] in
+                self?.chamaTelaPagamento()
+            })
+        }
     }
     
     func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
-        print("view was cancelled")
         dismiss(animated: true, completion: nil)
     }
 }

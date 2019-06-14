@@ -52,7 +52,7 @@ struct Alert {
         indicator.isUserInteractionEnabled = false
         indicator.startAnimating()
         alertController.view.addSubview(indicator)
-        indicator.anchorXY(centerX: nil, centerY: alertController.view.centerYAnchor, top: nil, leading: alertController.view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 0, left: 10, bottom: 0, right: 0))
+        indicator.anchorXY(centerX: nil, centerY: alertController.view.centerYAnchor, top: nil, leading: alertController.view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 0, left: 20, bottom: 0, right: 0))
         self.controller?.present(alertController, animated: true, completion: nil)
     }
     
