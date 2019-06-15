@@ -8,10 +8,10 @@
 
 import Foundation
 
-enum Result<T, Error> {
-    case success(T)
-    case failure(Error)
-}
+//enum Result<T, Error> {
+//    case success(T)
+//    case failure(Error)
+//}
 
 class CriptoCoinAPI {
     
