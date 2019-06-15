@@ -14,7 +14,7 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     lazy var qrCodeView = QrCodeView()
     var session = AVCaptureSession()
     var video: AVCaptureVideoPreviewLayer!
-    var delegate: ProtocolQrCodeCatch?
+    weak var delegate: ProtocolQrCodeCatch?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +33,12 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     }
     
     fileprivate func cameraConstruction() {
-        let captureDevice = AVCaptureDevice.default(for: AVMediaType.video)
+        guard let captureDevice = AVCaptureDevice.default(for: AVMediaType.video) else {
+            Alert(self).normalAlert(with: "Câmera indisponível. Vá em configurações e dê permissão para usar a câmera.")
+            return
+        }
         do {
-            let input = try AVCaptureDeviceInput(device: captureDevice!)
+            let input = try AVCaptureDeviceInput(device: captureDevice)
             session.addInput(input)
         } catch {
             print("error capture session")
@@ -58,8 +61,8 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         
         if let metadata = metadataObjects.last {
-            self.dismiss(animated: true) {
-                self.delegate?.didGetDataQrCodeProtocol(metadata.value(forKey: "stringValue") as! String)
+            self.dismiss(animated: true) { [weak self] in
+                self?.delegate?.didGetDataQrCodeProtocol(metadata.value(forKey: "stringValue") as! String)
             }
             self.session.stopRunning()
         }

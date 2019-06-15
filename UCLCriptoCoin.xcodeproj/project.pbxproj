@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37178B7B22B4748F00F7708E /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37178B7A22B4748F00F7708E /* FormView.swift */; };
 		37388937228502A600FD8ECD /* CadastrarCarteiraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37388936228502A600FD8ECD /* CadastrarCarteiraViewModel.swift */; };
 		3755899C229A48D30078E11D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3755899B229A48D30078E11D /* LoginView.swift */; };
 		3755899E229A4CA00078E11D /* SaldoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3755899D229A4CA00078E11D /* SaldoView.swift */; };
@@ -28,8 +27,6 @@
 		CB710DA721B5F04A000D0503 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB710DA621B5F04A000D0503 /* AppDelegate.swift */; };
 		CB710DB121B5F04F000D0503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB710DB021B5F04F000D0503 /* Assets.xcassets */; };
 		CB710DB421B5F04F000D0503 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB710DB221B5F04F000D0503 /* LaunchScreen.storyboard */; };
-		CB710DBF21B5F050000D0503 /* iOS_PicPay_TesteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB710DBE21B5F050000D0503 /* iOS_PicPay_TesteTests.swift */; };
-		CB710DCA21B5F050000D0503 /* iOS_PicPay_TesteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB710DC921B5F050000D0503 /* iOS_PicPay_TesteUITests.swift */; };
 		CB710DDF21B5F71B000D0503 /* ExtensionsAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB710DDE21B5F71B000D0503 /* ExtensionsAnchor.swift */; };
 		CB73D2FB21B69C750000F40E /* PrimingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73D2FA21B69C750000F40E /* PrimingController.swift */; };
 		CB73D2FD21B69CA30000F40E /* PrimingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73D2FC21B69CA30000F40E /* PrimingView.swift */; };
@@ -65,9 +62,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04A0CF0625922DAA711CE69C /* Pods-iOS-PicPay-Teste.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-PicPay-Teste.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-PicPay-Teste/Pods-iOS-PicPay-Teste.release.xcconfig"; sourceTree = "<group>"; };
-		0E042AAF01A8052BE606CDB1 /* Pods-iOS-PicPay-Teste.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-PicPay-Teste.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-PicPay-Teste/Pods-iOS-PicPay-Teste.debug.xcconfig"; sourceTree = "<group>"; };
-		37178B7A22B4748F00F7708E /* FormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		37388936228502A600FD8ECD /* CadastrarCarteiraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastrarCarteiraViewModel.swift; sourceTree = "<group>"; };
 		3755899B229A48D30078E11D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3755899D229A4CA00078E11D /* SaldoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaldoView.swift; sourceTree = "<group>"; };
@@ -82,7 +76,6 @@
 		37F5AF2222A0A2340048660B /* CriptoCoinAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoCoinAPI.swift; sourceTree = "<group>"; };
 		37F5AF2422A0CE7D0048660B /* CarteiraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarteiraViewController.swift; sourceTree = "<group>"; };
 		5D4FE3D3A345B226411A9097 /* Pods-UCLCriptoCoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UCLCriptoCoin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UCLCriptoCoin/Pods-UCLCriptoCoin.debug.xcconfig"; sourceTree = "<group>"; };
-		80AA242EFB305D5B1EF5B509 /* Pods_iOS_PicPay_Teste.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_PicPay_Teste.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C5437162CC2A1524B84E09 /* Pods-UCLCriptoCoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UCLCriptoCoin.release.xcconfig"; path = "Pods/Target Support Files/Pods-UCLCriptoCoin/Pods-UCLCriptoCoin.release.xcconfig"; sourceTree = "<group>"; };
 		CB03024C21CAF8780082229E /* Brunofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brunofire.swift; sourceTree = "<group>"; };
 		CB17DBDE21B8899D0085D688 /* NaviBarCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviBarCustom.swift; sourceTree = "<group>"; };
@@ -95,11 +88,7 @@
 		CB710DB321B5F04F000D0503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB710DB521B5F04F000D0503 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB710DBA21B5F050000D0503 /* UCLCriptoCoinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UCLCriptoCoinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB710DBE21B5F050000D0503 /* iOS_PicPay_TesteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_PicPay_TesteTests.swift; sourceTree = "<group>"; };
-		CB710DC021B5F050000D0503 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB710DC521B5F050000D0503 /* UCLCriptoCoinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UCLCriptoCoinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB710DC921B5F050000D0503 /* iOS_PicPay_TesteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_PicPay_TesteUITests.swift; sourceTree = "<group>"; };
-		CB710DCB21B5F050000D0503 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB710DDE21B5F71B000D0503 /* ExtensionsAnchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionsAnchor.swift; sourceTree = "<group>"; };
 		CB73D2FA21B69C750000F40E /* PrimingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimingController.swift; sourceTree = "<group>"; };
 		CB73D2FC21B69CA30000F40E /* PrimingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimingView.swift; sourceTree = "<group>"; };
@@ -114,8 +103,6 @@
 		CBEFA06621BC5D5900DA8E64 /* TopIndicatorGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopIndicatorGesture.swift; sourceTree = "<group>"; };
 		CBF6EA6721BB342900224680 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		CBF6EA7221BB4EB700224680 /* CredCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredCardViewModel.swift; sourceTree = "<group>"; };
-		CBF6EA8621BB64BC00224680 /* iOS_PicPay_Test_MVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_PicPay_Test_MVVM.swift; sourceTree = "<group>"; };
-		CBF6EA8821BB64BC00224680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E00F80C524BCDA1A4F855BD5 /* Pods_UCLCriptoCoin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UCLCriptoCoin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -190,7 +177,6 @@
 		A63D7AD358B7AC72DAFC3FE3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				80AA242EFB305D5B1EF5B509 /* Pods_iOS_PicPay_Teste.framework */,
 				E00F80C524BCDA1A4F855BD5 /* Pods_UCLCriptoCoin.framework */,
 			);
 			name = Frameworks;
@@ -242,9 +228,6 @@
 			children = (
 				37690F6922B3391A0026CE9A /* UCLCriptoCoin.entitlements */,
 				CB710DA521B5F04A000D0503 /* UCLCriptoCoin */,
-				CB710DBD21B5F050000D0503 /* iOS-PicPay-TesteTests */,
-				CB710DC821B5F050000D0503 /* iOS-PicPay-TesteUITests */,
-				CBF6EA8521BB64BC00224680 /* iOS-PicPay-Test-MVVM */,
 				CB710DA421B5F04A000D0503 /* Products */,
 				F2AFD574FDEBCC153F579F67 /* Pods */,
 				A63D7AD358B7AC72DAFC3FE3 /* Frameworks */,
@@ -273,24 +256,6 @@
 				CB710DB521B5F04F000D0503 /* Info.plist */,
 			);
 			path = UCLCriptoCoin;
-			sourceTree = "<group>";
-		};
-		CB710DBD21B5F050000D0503 /* iOS-PicPay-TesteTests */ = {
-			isa = PBXGroup;
-			children = (
-				CB710DBE21B5F050000D0503 /* iOS_PicPay_TesteTests.swift */,
-				CB710DC021B5F050000D0503 /* Info.plist */,
-			);
-			path = "iOS-PicPay-TesteTests";
-			sourceTree = "<group>";
-		};
-		CB710DC821B5F050000D0503 /* iOS-PicPay-TesteUITests */ = {
-			isa = PBXGroup;
-			children = (
-				CB710DC921B5F050000D0503 /* iOS_PicPay_TesteUITests.swift */,
-				CB710DCB21B5F050000D0503 /* Info.plist */,
-			);
-			path = "iOS-PicPay-TesteUITests";
 			sourceTree = "<group>";
 		};
 		CB710DD721B5F0AB000D0503 /* Utils */ = {
@@ -432,7 +397,6 @@
 		CB83FE5421BF405600A299D8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				37178B7A22B4748F00F7708E /* FormView.swift */,
 				3755899B229A48D30078E11D /* LoginView.swift */,
 				3755899D229A4CA00078E11D /* SaldoView.swift */,
 			);
@@ -463,20 +427,9 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		CBF6EA8521BB64BC00224680 /* iOS-PicPay-Test-MVVM */ = {
-			isa = PBXGroup;
-			children = (
-				CBF6EA8621BB64BC00224680 /* iOS_PicPay_Test_MVVM.swift */,
-				CBF6EA8821BB64BC00224680 /* Info.plist */,
-			);
-			path = "iOS-PicPay-Test-MVVM";
-			sourceTree = "<group>";
-		};
 		F2AFD574FDEBCC153F579F67 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0E042AAF01A8052BE606CDB1 /* Pods-iOS-PicPay-Teste.debug.xcconfig */,
-				04A0CF0625922DAA711CE69C /* Pods-iOS-PicPay-Teste.release.xcconfig */,
 				5D4FE3D3A345B226411A9097 /* Pods-UCLCriptoCoin.debug.xcconfig */,
 				85C5437162CC2A1524B84E09 /* Pods-UCLCriptoCoin.release.xcconfig */,
 			);
@@ -704,7 +657,6 @@
 				37F5AF2522A0CE7D0048660B /* CarteiraViewController.swift in Sources */,
 				CB83FE4721BF309D00A299D8 /* BaseTableViewControler.swift in Sources */,
 				CB710DA721B5F04A000D0503 /* AppDelegate.swift in Sources */,
-				37178B7B22B4748F00F7708E /* FormView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,7 +664,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB710DBF21B5F050000D0503 /* iOS_PicPay_TesteTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,7 +671,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB710DCA21B5F050000D0503 /* iOS_PicPay_TesteUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -882,14 +832,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UCLCriptoCoin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6A8BM2QQJ3;
+				DEVELOPMENT_TEAM = C922YMCSB5;
 				INFOPLIST_FILE = UCLCriptoCoin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = testemobile;
+				PRODUCT_BUNDLE_IDENTIFIER = brunovieira;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -903,14 +853,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UCLCriptoCoin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6A8BM2QQJ3;
+				DEVELOPMENT_TEAM = C922YMCSB5;
 				INFOPLIST_FILE = UCLCriptoCoin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = testemobile;
+				PRODUCT_BUNDLE_IDENTIFIER = brunovieira;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

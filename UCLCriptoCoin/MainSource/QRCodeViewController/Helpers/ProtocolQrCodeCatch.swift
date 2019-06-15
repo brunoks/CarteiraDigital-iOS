@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol ProtocolQrCodeCatch {
+protocol ProtocolQrCodeCatch: class {
     func didGetDataQrCodeProtocol(_ string: String)
 }

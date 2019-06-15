@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  iOS-PicPay-Teste
+//  UCLCriptoCoin
 //
 //  Created by Mac Novo on 03/12/18.
 //  Copyright © 2018 Bruno iOS Dev. All rights reserved.

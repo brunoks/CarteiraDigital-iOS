@@ -42,7 +42,6 @@ class QrCodeView: UIView {
     
     fileprivate func configure() {
         self.addSubview(self.backgroundView)
-        //self.addSubview(self.ilustrationQR)
         self.addSubview(self.closeButton)
         
         self.bringSubviewToFront(self.closeButton)
@@ -50,8 +49,6 @@ class QrCodeView: UIView {
         self.backgroundView.fillSuperview()
         
         self.closeButton.anchor(top: self.layoutMarginsGuide.topAnchor, leading: nil, bottom: nil, trailing: self.layoutMarginsGuide.trailingAnchor, padding: .init(), size: .init(width: 50, height: 50))
-        
-        //self.ilustrationQR.centerInSuperview(size:  CGSize(width: 390, height: 375))
     }
     
     @objc

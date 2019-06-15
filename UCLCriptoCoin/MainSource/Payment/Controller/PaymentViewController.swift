@@ -60,8 +60,6 @@ class PaymentViewController: UIViewController {
     
     fileprivate func configureNavTitle() {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-//        navigationBar.addSubview(self.navibar)
-//        self.navibar.anchor(top: nil, leading: navigationBar.leadingAnchor, bottom: navigationBar.bottomAnchor, trailing: navigationBar.trailingAnchor, padding: .init(), size: .init(width: 0, height: 60))
     }
     
     @objc

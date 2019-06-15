@@ -39,7 +39,7 @@ class PrimingView: UIView {
     
     let assignButton: DefaultButton = {
         let button = DefaultButton()
-        button.setTitle("Fazer Login na conta UCL", for: .normal)
+        button.setTitle("Cadastrar", for: .normal)
         return button
     }()
 

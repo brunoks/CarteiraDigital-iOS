@@ -76,11 +76,11 @@ class DefaultTextField: UITextField, UITextFieldDelegate {
     }
     func animationToDown() {
         if self.text == "" {
-            UIView.animate(withDuration: 0.2, animations: {
-                self.placeholderview.transform = CGAffineTransform(translationX: 0, y: 0)
-            }) { (_) in
-                self.placeholderCustom = self.placeholderview.text ?? ""
-                self.placeholderview.isHidden = true
+            UIView.animate(withDuration: 0.2, animations: { [weak self] in
+                self?.placeholderview.transform = CGAffineTransform(translationX: 0, y: 0)
+            }) { [weak self] (_) in
+                self?.placeholderCustom = self?.placeholderview.text ?? ""
+                self?.placeholderview.isHidden = true
             }
         } else { self.placeholderview.textColor = .darkGray }
         self.borderView.backgroundColor = .darkGray
