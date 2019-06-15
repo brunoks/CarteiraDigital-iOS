@@ -24,9 +24,6 @@ class CarteiraViewModel {
     var carteira = Carteira()
     
     init() {
-        if let encrypted = try? EncrypDecrypHelp.encryptMessage(text: "10c3e7593eb0525c10652c835e85f8e709e897bf891ef9fd9451c94755690ccf", password: "123") {
-            UserDefaults.standard.setValue(encrypted, forKey: WalletKeysUser.private_key)
-        }
         let privateKey = UserDefaults.standard.value(forKey: WalletKeysUser.private_key) as? String
         let publicKey = UserDefaults.standard.value(forKey: WalletKeysUser.public_key) as? String
         self.carteira.publicKey = publicKey
